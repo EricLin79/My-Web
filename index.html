@@ -2,20 +2,24 @@
 <html>
   <head>
     <title>Welcome to Eric’s Site!!!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--設定 viewport 基準-->
   </head>
   <body>
     <div id="nav">
       <div class="container">
-        <div class="menu">
-          <ul class="menu">
-  <li><a href="#about">Who am I</a></li>
-  <li><a href="#my-work">My Work</a></li>
-  <li><a href="#contact-me">Contact me</a></li>
-          </ul>
-        </div>
+        <button type="button" class="menu-button">
+          三
+        </button>  <!--加入切換用的漢堡按鈕-->
+        <input type="checkbox" class="menu-button-checkbox"><!--製作漢堡按鈕的開關-->
+        <ul class="menu">
+          <li><a href="#about">Who am I</a></li>
+          <li><a href="#my-work">My Work</a></li>
+          <li><a href="#contact-me">Contact me</a></li>
+        </ul>
+        
       </div>
     </div>
-    <div id="content">主要內容放這裡
+    <div id="content">
       <div class="container">
   <div id="about">
       <div id="my-avatar"><img src="img/download.jpg" alt="my avatar"></div>
@@ -30,17 +34,17 @@
       </tr>
       <tr>
         <th>工作經驗</th>
-        <td> 3 年，金融領域、長照領域、認知功能障礙</td>
+        <td> 3 年，長照領域、認知功能障礙研究</td>
       </tr>
       <tr>
-        <th>開發技能</th>
-        <td>HTML, CSS, JavaScript, Ruby on Rails, MySQL, GCP</td>
+        <th>個人特質</th>
+        <td>冷靜沈著</td>
       </tr>
       <tr>
         <th>學習經歷</th>
         <td>
           大航道計劃結業, 2018<br>
-          銘傳大學大學畢業, 2017
+          大學畢業, 2013
         </td>
       </tr>
     </table>

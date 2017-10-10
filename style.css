@@ -40,7 +40,7 @@ hr.bar {
 }
 
 #about, #my-work, #contact-me {
-  border: 1px solid yellow;
+
 }
 
 #my-work-gallery{
@@ -67,7 +67,7 @@ a {
   text-decoration: none;
 }
 li:hover  {
-  border: 1px solid #ff6600;
+  
   background-color: #fff;
 }
 
@@ -164,17 +164,16 @@ hr {
 
 /*contact me */
 #contact-me{
-  border: 1px solid green;  /* 標示用，完成後刪除 */
+
 }
 
-#form.contact-form{
-  border: 1px solid red ; /* 標示用，完成後刪除 */
+form.contact-form {
   width: 50% ;
-  margin 0 auto ;
+  margin: 0 auto ;
 }
 
 .form-row{
-  margin: bottom 15px;
+  margin-bottom :15px;
 }
 
 .form-row input,.form-row textarea{
@@ -212,3 +211,88 @@ hr {
 }
 
 
+/*
+  原始 css code
+*/
+
+
+@media screen and (min-width: 1024px) {
+  .menu-button,
+  .menu-button-checkbox {
+    display: none;
+  }
+}   /*讓按鈕在電腦版隱藏 螢幕寬度大於1024px*/
+
+
+@media screen and (max-width: 1023px) {
+  .counter{
+    width:auto;     /*設定 .container 寬度為螢幕大小*/
+}
+
+  /*調整按鈕的樣式與定位*/  
+  .menu-button {
+    float: right;
+    font-size: 25px;
+    line-height: 40px;
+    color: white;
+    background: transparent;
+    padding: 0 15px;
+    border: 0;
+  }          
+  
+  /*製作漢堡按鈕的開關*/
+  .menu-button-checkbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 40px;
+    opacity: 0;
+  }
+
+  .menu-button-checkbox:checked ~ .menu {
+    display: block;
+  }         
+
+  /*將導覽列移到右排*/
+  .menu {
+    display: none;
+    margin-top: 0;
+    padding-left: 0;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    width: 150px;
+    height: 100%;
+    background: red;
+  }
+  .menu li {
+    border: 0;
+    border-radius: 0;
+  }         
+
+
+  /*微調 #about 排版*/
+  #my-avatar {
+  width: 100%; 
+  }
+
+  #my-avatar img {
+  display: block;
+  margin: 15px auto;
+  }
+  
+  /*讓 #my-work 的內容自動適應寬度*/
+  .item {
+    max-width: 100%;
+  }
+
+  /*微調 #contact-me 排版*/
+  form.contact-form {
+    width: 80%;
+  }
+  /*
+    手機版的 css 都寫在這邊
+  */   
+
+}
